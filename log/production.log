@@ -226,3 +226,5 @@ Migrating to PopulateIssuesClosedOn (20130215111141)
 Migrating to RemoveIssuesDefaultFkValues (20130217094251)
 Connecting to database specified by database.yml
 Creating scope :system. Overwriting existing method Enumeration.system.
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
