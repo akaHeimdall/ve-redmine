@@ -1,2 +1,4 @@
-log/*
+log/*.log
+log/development.log
+log/production.log
 
