@@ -15,6 +15,10 @@ module RedmineApp
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    # Prevent asset pipeline generation during push
+    # https://devcenter.heroku.com/articles/rails-asset-pipeline#troubleshooting\
+    config.assets.initialize_on_precompile = false
+
     # Custom directories with classes and modules you want to be autoloadable.
     config.autoload_paths += %W(#{config.root}/lib)
 
