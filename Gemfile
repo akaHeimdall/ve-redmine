@@ -22,6 +22,9 @@ gem "vpim", "~> 0.695"
 gem 'acts_as_votable', '~> 0.4.0'
 #gem "acts-as-taggable-on", "~> 2.3.1" # Already declared fror redmine_contacts
 
+# Needed for redmine_S3 plugin
+gem 'aws-sdk'
+
 # Optional gem for LDAP authentication
 group :ldap do
   gem "net-ldap", "~> 0.3.1"
