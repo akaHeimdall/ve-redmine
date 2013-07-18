@@ -98,13 +98,7 @@ default:
   # Outgoing emails configuration (see examples above)
   email_delivery:
     delivery_method: :smtp
-    smtp_settings:
-      address: smtp.example.net
-      port: 25
-      domain: example.net
-      authentication: :login
-      user_name: "redmine@example.net"
-      password: "redmine"
+
 
   # Absolute path to the directory where attachments are stored.
   # The default is the 'files' directory in your Redmine instance.
@@ -231,7 +225,7 @@ production:
       user_name: <%= ENV['SENDGRID_USERNAME'] %> 
       password: <%= ENV['SENDGRID_PASSWORD'] %> 
       enable_starttls_auto: true
-      
+
 # specific configuration options for development environment
 # that overrides the default ones
 development:
