@@ -18,6 +18,10 @@ gem 'vcard', '~> 0.2.8'
 # Needed for Redmine People plugin
 gem "vpim", "~> 0.695"
 
+# Needed for Redmine Questions plugin
+gem 'acts_as_votable', '~> 0.4.0'
+#gem "acts-as-taggable-on", "~> 2.3.1" # Already declared fror redmine_contacts
+
 # Optional gem for LDAP authentication
 group :ldap do
   gem "net-ldap", "~> 0.3.1"
