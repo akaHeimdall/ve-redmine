@@ -1,0 +1,9 @@
+Thanks to the following people for their help:
+
+* The awesome contributors of Backlogs: https://github.com/backlogs/redmine_backlogs/graphs/contributors
+* Emiliano Heyns - Project maintainer
+* Mark Maglana (relaxdiego) - Some guy who used to contribute code
+* Guy Naor - Project sponsorship
+* G2iX - Project sponsorship
+* Eric Davis - For the advice on the model patching pattern magic
+* Everyone at Redmine.org - For the pure awesomeness that is Redmine :-)
