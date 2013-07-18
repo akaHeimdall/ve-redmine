@@ -11,6 +11,10 @@ gem "fastercsv", "~> 1.5.0", :platforms => [:mri_18, :mingw_18, :jruby]
 gem "builder", "3.0.0"
 gem 'json' # Needed for S3
 
+# Needed for Redmine Contacts (People)
+gem 'acts-as-taggable-on', '~> 2.3.1'
+gem 'vcard', '~> 0.2.8'
+
 # Optional gem for LDAP authentication
 group :ldap do
   gem "net-ldap", "~> 0.3.1"
