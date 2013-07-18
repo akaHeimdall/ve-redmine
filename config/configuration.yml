@@ -214,7 +214,7 @@ default:
 # specific configuration options for production environment
 # that overrides the default ones
 #Using SendGrid
-# production:
+production:
 #   email_delivery:
 #     delivery_method: :smtp
 #     smtp_settings:
