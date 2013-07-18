@@ -1,0 +1,60 @@
+== Redmine Helpdesk plugin changelog
+
+Redmine Helpdesk plugin - helpdesk plugin (email support) for redmine
+Copyright (C) 2011-2012  Kirill Bezrukov
+http://www.redminecrm.com/
+
+== 2013-01-12 v2.1.0
+
+* Redmine 2.2.0 support
+* Add contacts from CC addresses when receiving issues
+* Select customer and ticket source chanel on issue creation form
+* Cc and Bcc for sending response
+* Delete Junk mail button
+* Filter by issues with/without tickets
+* Link response by "In-Reply-To" field by message-Id
+* Autocomplete for Helpdesk ticket customer select
+* Selection To address for response
+* Rake task changed from redmine:email:contacts_helpdesk: to redmine:email:helpdesk:
+
+== 2012-11-01 v2.0.0
+
+* Feature: Redmine 2.1 support
+* Feature: Ruby 1.9 support
+* Feature: issues list for each contact
+* Feature: Preview for email original in issue notes
+* Feature: New macros %%QUOTED_ISSUE_DESCRIPTION%%, %%SUBJECT%%, %%NOTE_AUTHOR%%, %%NOTE_AUTHOR.FIRST_NAME%%
+* Feature: Applying macros for sent issues notes
+* Feature: email Blacklist Filtering
+* Feature: REST API for getting mails from all projects
+* Feature: Last message from/to contact in issue list
+* Feature: Contact profile (card) on issue show page
+* Feature: Previous messages from contact on issue show page
+* Feature: Send mails as plain text option
+* Feature: Autoresponse with Noreply-Email
+* Feature: Last message column for issues list
+* Feature: Show message header and footer in issue edit form
+* Feature: Contact profile card on the issue sidebar
+* Feature: Answer to customer from email
+* Feature: Add line breaks for html only message
+* Feature: Activity providers for helpdesk tickets and responses
+* Feature: Send flag default settings
+* Bug: SSL always on with IMAP and project mail settings
+* Bug: IMAP Folder does not work
+* Bug: Journals connections does not copy after contacts merge
+* Bug: move on failure label
+* Bug: "Add tags after create" doesn't save
+* Bug: Macro %%UPDATER%% not working
+* Bug: Email subject format is not used for replies (rather than auto-notifications)
+
+
+== 2012-03-07 v1.0.3
+
+* Feature: Store incoming emails as attachments to issue/journal
+* Feature: use mail Header to track email to issue id
+* Feature: Store email server settings in project settings tab
+* Feature: Multiple Recipients from issue contacts
+* Feature: Create new issue if respond lifetime expired
+* Feature: CSS styles for emails
+* Feature: Change issue status in note add form
+* Feature: API for sending response to issue
