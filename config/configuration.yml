@@ -96,8 +96,8 @@
 # default configuration options for all environments
 default:
   # Outgoing emails configuration (see examples above)
-  # email_delivery:
-  #   delivery_method: :smtp
+  email_delivery:
+    delivery_method: :smtp
 
 
   # Absolute path to the directory where attachments are stored.
@@ -214,18 +214,18 @@ default:
 # specific configuration options for production environment
 # that overrides the default ones
 #Using SendGrid
-# production:
-#   email_delivery:
-#     delivery_method: :smtp
-#     smtp_settings:
-#       address: "smtp.sendgrid.net"
-#       port: 587
-#       authentication: :plain
-#       domain: "heroku.com"
-#       user_name: "app16858462@heroku.com" 
-#       password: "3ati0c6j"
-#       enable_starttls_auto: true
+production:
+  email_delivery:
+    delivery_method: :smtp
+    smtp_settings:
+      address: "smtp.sendgrid.net"
+      port: 587
+      authentication: :plain
+      domain: "heroku.com"
+      user_name: "app16858462@heroku.com" 
+      password: "3ati0c6j"
+      enable_starttls_auto: true
 
 # specific configuration options for development environment
 # that overrides the default ones
-# development:
+development:
