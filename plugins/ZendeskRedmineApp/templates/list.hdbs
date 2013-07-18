@@ -1,0 +1,17 @@
+<div>
+  <ul>
+    {{#bookmarks}}
+      <li data-bookmark-id="{{id}}">
+        <a href="#/tickets/{{ticket.nice_id}}">{{ticket.subject}}</a>
+      </li>
+    {{/bookmarks}}
+  </ul>
+
+  {{#unless bookmarks.length}}
+    <p>{{t "none"}}}</p>
+  {{/unless}}
+
+  {{#if ticketIsBookmarkable}}
+    <button class="btn btn-inverse bookmark">{{t "bookmark_this_ticket"}}</button>
+  {{/if}}
+</div>

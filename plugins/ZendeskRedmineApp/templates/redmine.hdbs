@@ -1,0 +1,83 @@
+<h4>Issue Info</h4>
+
+<br/>
+
+Current ID:<br/><input type="text" id="existing_redmine_id" value="{{redmine.issue.id}}" style="width: 55px"/>
+
+<button type="submit" id="button_link" class="btn btn-inverse">Link</button>
+{{#if redmine}}
+<button id="button_unlink" class="btn btn-inverse">Unlink</button>
+{{/if}}
+
+<br/><br/>
+
+{{#if redmine}}
+<div id="div_ticketstats">
+    <a href="{{redmine_url}}/issues/{{redmine.issue.id}}" target="_blank">
+        <strong>#{{redmine.issue.id}}</strong>
+    </a> {{redmine.issue.subject}}<br/><br/>
+    <strong>Status</strong>: {{redmine.issue.status.name}}<br/>
+    <strong>Assigned To</strong>: {{redmine.issue.assigned_to.name}}<br/>
+    <strong>Target Version</strong>: {{redmine.issue.fixed_version.name}}{{redmine_build}}<br/>
+    <strong>Created On</strong>: {{redmine.issue.created_on}}<br/>
+    <strong>Updated On</strong>: {{redmine.issue.updated_on}}<br/>
+</div>
+{{/if}}
+
+{{#unless redmine}}
+
+<br/><br/>
+
+<h4>Create Issue</h4>
+
+<br/>
+
+<form>
+    Project:<br/>
+    <select id="input_projects" style="width: 100%">
+        {{#each projects.projects}}
+        <option value="{{this.id}}">{{#if this.parent}}{{this.parent.name}}/{{/if}}{{this.name}}</option>
+        {{/each}}
+    </select>
+    <br/>
+    Tracker:<br/>
+    <select id="input_trackers" style="width: 100%" />
+    Priority:<br/>
+    <select id="input_priority" style="width: 100%">
+        <option value="1">Normal</option>
+        <option value="2">Low</option>
+        <option value="3">High</option>
+        <option value="4">Critical</option>
+    </select>
+    Title:<br/>
+    <textarea id="input_subject" style="width: 300px"></textarea>
+    Description:<br/>
+    <textarea id="input_description" style="width: 300px"></textarea>
+
+    <br/><br/>
+
+    <input type="submit" id="button_create" class="btn btn-inverse" value="Create" />
+
+</form>
+
+{{/unless}}
+
+<!--
+<div>
+  <ul>
+    {{#bookmarks}}
+      <li data-bookmark-id="{{id}}">
+        <a href="#/tickets/{{ticket.nice_id}}">{{ticket.subject}}</a>
+      </li>
+    {{/bookmarks}}
+  </ul>
+
+  {{#unless bookmarks.length}}
+    <p>{{t "none"}}}</p>
+  {{/unless}}
+
+  {{#if ticketIsBookmarkable}}
+    <button class="btn btn-inverse bookmark">{{t "bookmark_this_ticket"}}</button>
+  {{/if}}
+</div>
+-->

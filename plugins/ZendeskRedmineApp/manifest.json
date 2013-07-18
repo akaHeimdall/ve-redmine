@@ -1,0 +1,40 @@
+{
+  "author": {
+    "name": "Practice Evolve",
+    "email": "info@practiceevolve.com.au"
+  },
+
+  "location": "ticket_sidebar",
+  "defaultLocale": "en",
+  "private": false,
+  "singleInstall": true,
+  "frameworkVersion": "0.5",
+  "parameters":
+	[
+		{
+			"name":"redmine_url",
+			"type":"url",
+			"required":true
+		},
+		{
+			"name":"apiKey",
+			"type":"text",
+			"required":true
+		},
+		{
+			"name":"zendeskPrefix",
+			"type":"text",
+			"required":true
+		},
+		{
+			"name":"redmineIdFieldId",
+			"type":"text",
+			"required":true
+		},
+		{
+			"name":"redmine_zdfieldid",
+			"type":"text",
+			"required":true
+		}
+     ]
+}
