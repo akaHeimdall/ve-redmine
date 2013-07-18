@@ -25,6 +25,9 @@ gem 'acts_as_votable', '~> 0.4.0'
 # Needed for redmine_S3 plugin
 gem 'aws-sdk'
 
+# New Relic integration
+gem 'newrelic_rpm'
+
 # Optional gem for LDAP authentication
 group :ldap do
   gem "net-ldap", "~> 0.3.1"
