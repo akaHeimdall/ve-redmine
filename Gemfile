@@ -10,6 +10,7 @@ gem "coderay", "~> 1.0.9"
 gem "fastercsv", "~> 1.5.0", :platforms => [:mri_18, :mingw_18, :jruby]
 gem "builder", "3.0.0"
 gem 'json' # Needed for S3
+#gem 'rollbar'
 
 # Needed for Redmine Contacts plugin
 gem 'acts-as-taggable-on', '~> 2.3.1'
