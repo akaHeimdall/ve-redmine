@@ -1,0 +1,20 @@
+<%
+  # Add special class on sprints shared system wide. Used for enabling DnD.
+  shared_system = ''
+  shared_system = 'shared-system-wide' if backlog[:sprint] && backlog[:sprint].sharing=='system'
+%>
+<% cls = '' unless defined?(cls) %>
+<div class="backlog<%= cls %> <%= shared_system %>">
+  <div class="header">
+    <%- if backlog[:sprint] %>
+      <%= render :partial => "rb_sprints/sprint", :object => backlog[:sprint], :locals => {:cls => 'model sprint'} %>
+    <%- elsif backlog[:release] %>
+      <%= render :partial => "rb_releases/release_mbp", :object => backlog[:release], :as => :release %>
+    <%- else %>
+      <%= render :partial => "productbacklog" %>
+    <%- end %>
+  </div>
+  <ul id="stories-for-<%= backlog[:release] ? "release-#{backlog[:release].id}" : (backlog[:sprint] ? backlog[:sprint].id : 'product-backlog') %>" class="stories">
+    <%= render :partial => "rb_stories/story", :collection => backlog[:stories] %>
+  </ul>
+</div>
